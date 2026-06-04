@@ -1,0 +1,74 @@
+<script>
+var a = 10;
+let b = 20;
+const c = 30;
+
+
+a = 100;
+b = 200;
+
+
+console.log(a); 
+console.log(b); 
+console.log(c); 
+
+console.log(ab);
+
+var ab = 16;
+
+
+// console.log(username);
+// let username = "Gowtham";
+
+const grandParent = () => {
+  let gp = "GrandParent";
+
+  const parent = () => {
+    let p = "Parent";
+
+    const child = () => {
+      console.log(gp); 
+      console.log(p);  
+    };
+
+    child();
+  };
+
+  parent();
+};
+
+grandParent();
+
+
+const greet = () => {
+  console.log("Hello");
+};
+
+greet();
+
+
+
+console.log("10" + 5);    
+console.log("10" - 5);    
+console.log(true + 1);   
+console.log(false + 10);  
+console.log(Number("100")); 
+console.log(String(500));   
+
+
+
+
+let str = "Hello";
+let num = 10;
+let bool = true;
+let undef;
+let nul = null;
+let big = 123n;
+let sym = Symbol("id");
+
+let obj = { name: "Gowtham" };
+let arr = [1, 2, 3];
+let func = function() {};
+
+
+</script>
