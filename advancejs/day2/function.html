@@ -1,0 +1,152 @@
+<script>
+    // const user = (name)=>{
+
+     
+
+    // }
+
+    // const name = {name}p
+
+    // console.log();
+
+
+    // const showind =(...even )=>{
+
+
+    //     const num = even.filter((e)=>e%2===0)
+
+
+    //     return num
+
+
+    // }
+    // console.log(showind(1,2,34,55,64,543,544,23));
+    
+
+
+    // const input =(name,age,email,password)=>{
+
+    //     return {name,age,email,password}
+
+
+
+    // }
+
+    // console.log(input("Gowtham",23,"gowtham18@example.com","password123")); 
+
+
+    // const add = (...num)=>{
+
+    //     let sum = 0
+
+    //     for(let i of num){
+
+    //         sum+=i
+
+    //     }       
+
+    //     return sum
+
+
+
+
+    // }
+
+    // console.log(add(1,2,3,4,5,6,7,8,9,10));
+
+
+  const name =(firstname,lastname)=>{
+  
+    return firstname + " " + lastname
+
+  }
+
+  console.log(name("Gowtham","B"));
+
+
+  const product =(price,quntity)=>{
+
+    return price * quntity
+
+  }
+
+  console.log(product(500,7));
+
+
+  const age =(gb)=>{
+    return gb > 18 ? "Eligible for voting" : "Not eligible for voting";
+  }
+  console.log(age(80));
+
+
+  const large =(l,a,r)=>{
+
+    return Math.max(l,a,r) 
+
+  }
+  console.log(large(20,89,789));
+
+
+  const getUsername = (username = "Guest") => {
+    return username;
+};
+
+
+console.log(getUsername());          
+
+
+const calculate = (a, b) => {
+    return {
+        sum: a + b,
+        difference: a - b,
+        multiplication: a * b,
+        division: a / b
+    };
+};
+
+
+console.log(calculate(10, 5));
+
+
+
+
+const evenorodd =(eoro)=>{
+
+    return eoro % 2===0 ? "Even" : "Odd";
+
+
+}
+
+console.log(evenorodd(1));
+console.log(evenorodd(1236));
+
+
+const getStringLength = (str) => {
+    return str.length;
+};
+
+
+console.log(getStringLength("Gowtham")); 
+
+const printName = (name, count) => {
+    for (let i = 1; i <= count; i++) {
+        console.log(name);
+    }
+};
+
+
+printName("Gowtham", 3);
+
+
+const findSmallest = (...nums) => {
+    return Math.min(...nums);
+};
+
+
+console.log(findSmallest(10, 25, 5, 40)); 
+  
+  
+  
+
+
+</script>
