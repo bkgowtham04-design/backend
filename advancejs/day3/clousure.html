@@ -1,0 +1,113 @@
+<script>
+function createBankAccount() {
+  let balance = 5000;
+
+  return {
+    deposit: (amount) => {
+      balance += amount;
+      console.log(`Deposited: ${amount}`);
+    },
+    withdraw: (amount) => {
+      if (amount > balance) {
+        console.log("Insufficient balance");
+      } else {
+        balance -= amount;
+        console.log(`Withdrawn: ${amount}`);
+      }
+    },
+    checkBalance: () => {
+      console.log(`Balance: ${balance}`);
+    }
+  };
+}
+
+const account = createBankAccount();
+account.deposit(1000);
+account.withdraw(2000);
+account.checkBalance();
+
+
+function attendanceCounter() {
+  let count = 0;
+
+  return function () {
+    count++;
+    console.log(`Attendance Count: ${count}`);
+  };
+}
+
+const attend = attendanceCounter();
+attend();
+attend();
+attend();
+
+
+function visitorCounter() {
+  let visitors = 0;
+
+  return function () {
+    visitors++;
+    console.log(`Total Visitors: ${visitors}`);
+  };
+}
+
+const visit = visitorCounter();
+visit();
+visit();
+
+
+
+function processPayment(callback) {
+  callback();
+}
+
+const gpay = () => console.log("Paid using GPay");
+const phonepe = () => console.log("Paid using PhonePe");
+const paytm = () => console.log("Paid using Paytm");
+
+processPayment(gpay);
+processPayment(phonepe);
+processPayment(paytm);
+
+
+const mail = (cb)=>{
+
+
+cb()
+
+}
+
+const mymail = ()=>{
+
+  setTimeout(()=>{
+    console.log("slot for cricket");
+  },1000)
+
+    
+}
+
+const turfmail = ()=>{
+
+    setTimeout(()=>{
+
+        console.log("mail recived");
+    },2000)
+    
+}
+
+const slamail =()=>{
+   setTimeout(()=>{
+     console.log("slot conformed");
+   },3000)
+    
+}
+
+mail(mymail)
+mail (turfmail)
+
+mail(slamail)
+
+
+
+
+</script>
