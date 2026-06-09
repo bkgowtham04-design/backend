@@ -1,0 +1,129 @@
+<script>
+    const obj = {name:"Gowtham",cources:"Fullstack",city:"Chennai"}
+
+  console.log(`Name: ${obj.name}, Course: ${obj.cources} ,City: ${obj.city}`);
+
+
+  const salary = (emp) => {
+  return emp.monthlysalary * 12;
+};
+
+const employee = {Name: "Gowtham",Role: "Fullstack Developer",monthlysalary: 30000};
+
+console.log(`Name : ${employee.Name}Role: ${employee.Role}Monthly Salary : ₹${employee.monthlysalary}Yearly Salary : ₹${salary(employee)}`);
+
+const product =(a,b)=>{
+
+    return a - (a*b) / 100
+
+
+    
+    
+
+}
+console.log(product(2000,20));
+
+
+const registerUser = (username, role = "User") => {
+  return `Username: ${username}, Role: ${role}`;
+};
+
+console.log(registerUser("Gowtham"));
+console.log(registerUser("AdminUser", "Admin"));
+
+
+const totalBill = (...prices) => {
+  return prices.reduce((sum, price) => sum + price, 0);
+};
+
+console.log(totalBill(100, 200, 300)); 
+
+
+
+const frontend = ["HTML", "CSS", "JavaScript"];
+const backend = ["Node.js", "Express", "MongoDB"];
+
+const fullstack = [...frontend, ...backend];
+
+console.log(fullstack);
+  
+
+
+const employeee = {
+  name: "Gowtham",
+  role: "Developer"
+};
+
+const updatedEmployeee = {
+  ...employee,
+  department: "IT",
+  experience: "2 years",
+  salary: 40000
+};
+
+console.log(updatedEmployeee);
+
+
+const student = {
+  name: "Gowtham",
+  age: 22,
+  course: "Full Stack",
+  city: "Chennai"
+};
+
+const { name, age, course, city } = student;
+
+console.log(name, age, course, city);
+
+
+
+const user = {
+  profile: {
+    address: {
+      city: "Chennai"
+    }
+  }
+};
+
+const citty = user?.profile?.address?.citty ?? "City not available";
+
+console.log(citty);
+
+
+const highestMark = (...marks) => {
+  return Math.max(...marks);
+};
+
+console.log(highestMark(85, 92, 78, 96)); // 96
+
+
+
+const mergeCourses = (...arrays) => {
+  return [].concat(...arrays);
+};
+
+console.log(mergeCourses(["HTML"], ["JS"], ["React"]));
+
+
+
+const prooduct = {
+  name: "Laptop",
+  price: 50000,
+  stock: 10
+};
+
+const updatedProduct = {
+  ...prooduct,
+  stock: 20
+};
+
+console.log(updatedProduct);
+  
+
+
+  const displayUser = ({ name, age, city }) => {
+  console.log(`Name: ${name}, Age: ${age}, City: ${city}`);
+};
+
+displayUser({ name: "Gowtham", age: 22, city: "Chennai" });
+</script>
