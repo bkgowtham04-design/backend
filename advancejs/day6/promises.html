@@ -1,0 +1,51 @@
+<script>
+    // const getData = ()=>{
+    //         // const getDatas = new Promises ((resolve,reject))
+
+    //         return fetch("https://dummyjson.com/products").then((res)=>{return(res.json())})
+    // }
+
+
+    // const getdatass = await fetch("https://dummyjson.com/products")
+
+
+    // const data = await res.json()
+
+    // console.log(data.product);
+
+
+   const getdata =()=>{
+
+    const getpromises = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Gowtham")
+        },2000)
+    })
+
+     getpromises.then((resolve)=>(console.log(resolve)))
+   
+
+   }
+
+   getdata()
+
+
+ const getpromises = new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("Login")
+        },3000)
+    })
+
+
+    getpromises.then((resolve)=>(console.log(resolve)))
+
+
+
+
+    
+
+
+
+    
+    
+</script>
