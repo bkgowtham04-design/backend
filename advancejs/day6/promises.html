@@ -42,7 +42,82 @@
 
 
 
-    
+    const getStudent = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Sudhan");
+    }, 2000);
+  });
+};
+
+// Usage
+getStudent()
+  .then((data) => {
+    console.log("Student Name:", data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
+
+  const getEmployee = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({
+        id: 1,
+        name: "Sudhan",
+        role: "Trainer"
+      });
+    }, 3000);
+  });
+};
+
+// Usage
+getEmployee()
+  .then((emp) => {
+    console.log("Employee Details:", emp);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
+
+  const login = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Login Success");
+    }, 2000);
+  });
+};
+
+// Usage
+login()
+  .then((msg) => {
+    console.log(msg);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
+  const orderFood = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Pizza Delivered");
+    }, 4000);
+  });
+};
+
+// Usage
+orderFood()
+  .then((status) => {
+    console.log(status);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 
 
