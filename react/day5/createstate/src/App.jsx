@@ -1,74 +1,55 @@
-﻿import React, { useState } from 'react'
+﻿import { Link, Route, Routes } from "react-router-dom";
 
-const App = () => {
+import Welcome from './componets/Welcome';
+import LifecycleDemo from './componets/LifecycleDemo';
 
-  const [count, setCount] = useState(0)
-  const [change, setChange] = useState(true)
+import UseStateDemo from './hooks/UseStateDemo';
+import Change from "./hooks/Change";
+import ObjectState from './hooks/ObjectState';
 
-  const handleClick = () => {
-    setCount(count + 1)
-  }
-
-  const handlede = () => {
-    setCount(count - 1)
-  }
-
-  const handlereset =()=>{
-
- setCount(0)
-
-  }
-
-  const handleChange = () => {
-    setChange(!change)
-  }
-
-  
-
+const App =()=> {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <>
+     <nav className="bg-gray-900 text-white p-4 flex justify-center gap-8 shadow-md">
+  <Link to="/" className="hover:text-blue-400 transition">
+    TASK 1
+  </Link>
 
-      <div className="bg-white shadow-lg rounded-xl p-8 text-center w-80">
+  <Link to="/task2" className="hover:text-blue-400 transition">
+    TASK 2
+  </Link>
 
-        <h1 className="text-2xl font-bold mb-4">Counter App</h1>
+  <Link to="/task3" className="hover:text-blue-400 transition">
+    TASK 3
+  </Link>
 
-        <h2 className="text-gray-500">Starting Count</h2>
-        <h1 className="text-4xl font-bold my-3">{count}</h1>
+  <Link to="/task4" className="hover:text-blue-400 transition">
+    TASK 4
+  </Link>
 
-        <div className="flex gap-3 justify-center mb-6">
-          <button 
-            onClick={handleClick}
-            className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg"
-          >
-            Increase
-          </button>
+  <Link to="/task5" className="hover:text-blue-400 transition">
+    TASK 5
+  </Link>
+</nav>
 
-          <button 
-            onClick={handlede}
-            className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg"
-          >
-            Decrease
-          </button>
+      <Routes>
+        {/* Task 1 */}
+        <Route path="/" element={<Welcome />} />
 
-          <button onClick={handlereset}>Reset</button>
-        </div>
+        {/* Task 2 */}
+        <Route path="/task2" element={<LifecycleDemo />} />
 
-        <h2 className="text-gray-500">True Or False</h2>
-        <h1 className="text-xl font-semibold my-3">
-          {change ? "This is True" : "This is False"}
-        </h1>
+        {/* Task 3 */}
+        <Route path="/task3" element={<UseStateDemo />} />
 
-        <button 
-          onClick={handleChange}
-          className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg"
-        >
-          Toggle
-        </button>
+        {/* Task 4 */}
+        <Route path="/task4" element={<Change />} />
 
-      </div>
-
-    </div>
-  )
+        {/* Task 5 */}
+        <Route path="/task5" element={<ObjectState />} />
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
